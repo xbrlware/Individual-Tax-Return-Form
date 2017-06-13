@@ -1,0 +1,17 @@
+{
+  "name": "Individual Tax Return Form",
+  "version": "0.1.1",
+  "homepage": "individual.taxsource.com.au",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "authors": [
+    "Sean Darcy <Darcys22@gmail.com>"
+  ],
+  "description": "Simple Web form that outputs individual tax returns in XBRL",
+  "main": "index.html",
+  "keywords": [
+  ],
+  "license": "GPLv3"
+}
