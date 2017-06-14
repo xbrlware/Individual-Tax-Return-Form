@@ -15,6 +15,13 @@
 }
 #footer .darcy {
   padding: 45px 0px 0px 55px;
+  display:none;
+}
+
+@media screen and (min-width: 480px) {
+   #footer .darcy {
+         display:block;
+   }
 }
 #footer .copyright {
   float: right;

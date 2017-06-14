@@ -33,13 +33,13 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Cover Page Details</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#covermodal" >Cover Page Details</a></li>
 					<li><a href="#">Return Settings</a></li>
 					<li><a href="#">Import Prefill</a></li>
 					<li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add Tax Item <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Payment Summary</a></li>
+							<li><a href="#" data-toggle="modal" data-target="#paymentsummarymodal" >Payment Summary</a></li>
 							<li><a href="#">Interest Item</a></li>
 							<li><a href="#">Dividend</a></li>
 							<li><a href="#">Deduction</a></li>
@@ -181,6 +181,177 @@
             <!--</tr>-->
           </tbody>
         </table>
+      </div>
+    </div>
+    <div class="modal fade" id="paymentsummarymodal" tabindex="-1" role="dialog" aria-labelledby="cover modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Payment Summary</h2>
+          </div>
+          <div class = "modal-body">
+            <div class="form-group">
+              <label for="name" class="cols-sm-2 control-label">Main Occupation</label>
+              <div class="cols-sm-10">
+                <input v-model="user.name" type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+              </div>
+            </div>
+						<div class="row">
+								<div class="col-xs-7 col-md-7">
+										<div class="form-group">
+												<label for="cardExpiry">Main Occupation</label>
+												<input 
+														type="tel" 
+														class="form-control" 
+														name="cardExpiry"
+														placeholder="MM / YY"
+														autocomplete="cc-exp"
+														required 
+												/>
+										</div>
+								</div>
+								<div class="col-xs-5 col-md-5 pull-right">
+										<div class="form-group">
+												<label for="cardCVC">Occupation Code</label>
+												<input 
+														type="tel" 
+														class="form-control"
+														name="cardCVC"
+														placeholder="CVC"
+														autocomplete="cc-csc"
+														required
+												/>
+										</div>
+								</div>
+						</div>
+
+						<div class="row">
+								<div class="col-xs-5 col-md-5">
+										<div class="form-group">
+												<label for="cardExpiry">Payer ABN</label>
+												<input 
+														type="tel" 
+														class="form-control" 
+														name="cardExpiry"
+														placeholder="MM / YY"
+														autocomplete="cc-exp"
+														required 
+												/>
+										</div>
+								</div>
+                <div class="col-xs-3 col-md-3 pull-right">
+										<div class="form-group">
+												<label for="cardCVC">Income</label>
+												<input 
+														type="tel" 
+														class="form-control"
+														name="cardCVC"
+														placeholder="CVC"
+														autocomplete="cc-csc"
+														required
+												/>
+										</div>
+								</div>
+								<div class="col-xs-3 col-md-3 pull-right">
+										<div class="form-group">
+												<label for="cardCVC">Tax Withheld</label>
+												<input 
+														type="tel" 
+														class="form-control"
+														name="cardCVC"
+														placeholder="CVC"
+														autocomplete="cc-csc"
+														required
+												/>
+										</div>
+								</div>
+						</div>
+            <div class="row">
+              <div class="col-xs-3 col-md-3">
+										<div class="form-group">
+												<label for="cardCVC">Lump Sum A</label>
+												<input 
+														type="tel" 
+														class="form-control"
+														name="cardCVC"
+														placeholder="CVC"
+														autocomplete="cc-csc"
+														required
+												/>
+										</div>
+								</div>
+              <div class="col-xs-3 col-md-3">
+										<div class="form-group">
+												<label for="cardCVC">Lump Sum B</label>
+												<input 
+														type="tel" 
+														class="form-control"
+														name="cardCVC"
+														placeholder="CVC"
+														autocomplete="cc-csc"
+														required
+												/>
+										</div>
+								</div>
+                <div class="col-xs-3 col-md-3">
+										<div class="form-group">
+												<label for="cardCVC">Lump Sum D</label>
+												<input 
+														type="tel" 
+														class="form-control"
+														name="cardCVC"
+														placeholder="CVC"
+														autocomplete="cc-csc"
+														required
+												/>
+										</div>
+								</div>
+                <div class="col-xs-3 col-md-3">
+										<div class="form-group">
+												<label for="cardCVC">Lump Sum E</label>
+												<input 
+														type="tel" 
+														class="form-control"
+														name="cardCVC"
+														placeholder="CVC"
+														autocomplete="cc-csc"
+														required
+												/>
+										</div>
+								</div>
+						</div>
+            <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Save</button>        
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="covermodal" tabindex="-1" role="dialog" aria-labelledby="cover modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Individual Tax Return</h2>
+          </div>
+          <div class = "modal-body">
+            <div class="form-group">
+              <label for="name" class="cols-sm-2 control-label">Your Name</label>
+              <div class="cols-sm-10">
+                <input v-model="user.name" type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="tfn" class="cols-sm-2 control-label">Your TFN</label>
+              <div class="cols-sm-10">
+                <input v-model="user.tfn" type="text" class="form-control" name="tfn" id="tfn"  placeholder="Enter your TFN"/>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
     <div class="modal fade" id="validateModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">

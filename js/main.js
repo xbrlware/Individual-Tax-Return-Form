@@ -1,7 +1,15 @@
 new Vue({
   el: '#app',
   data: {
-      message: 'Hello Vue.js!'
+      user: {
+        name:"",
+        dob:"",
+        bsb:"",
+        accountnumber:"",
+        accountname:"",
+        final: false,
+        tfn:""
+      }
     }
 });
 
